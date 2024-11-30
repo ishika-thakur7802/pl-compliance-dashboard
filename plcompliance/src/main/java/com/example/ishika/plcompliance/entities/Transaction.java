@@ -1,6 +1,7 @@
 package com.example.ishika.plcompliance.entities;
 
 import com.example.ishika.plcompliance.enums.transaction_status;
+import com.example.ishika.plcompliance.enums.transaction_type;
 import jakarta.persistence.*;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.OnDelete;
@@ -29,6 +30,10 @@ public class Transaction {
     @Enumerated(EnumType.STRING) // Or EnumType.ORDINAL, depending on how the DB stores it
     @Column(name = "status", columnDefinition = "transaction_status not null")
     private transaction_status status;
+
+    @Enumerated(EnumType.STRING) // Or EnumType.ORDINAL, depending on how the DB stores it
+    @Column(name = "type", columnDefinition = "transaction_type not null")
+    private transaction_type type;
 
     @ColumnDefault("false")
     @Column(name = "reconciled")
@@ -90,5 +95,12 @@ public class Transaction {
         this.acc = acc;
     }
 
+    public transaction_type getType()
+    {
+        return type;
+    }
 
+    public void setType(transaction_type type) {
+        this.type = type;
+    }
 }
