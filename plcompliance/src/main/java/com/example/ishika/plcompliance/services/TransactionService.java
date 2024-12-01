@@ -4,8 +4,6 @@ import com.example.ishika.plcompliance.entities.Transaction;
 import com.example.ishika.plcompliance.repositories.TransactionRepository;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
-
 @Service
 public class TransactionService implements TransactionServiceInterface{
     private final TransactionRepository transactionRepository;
