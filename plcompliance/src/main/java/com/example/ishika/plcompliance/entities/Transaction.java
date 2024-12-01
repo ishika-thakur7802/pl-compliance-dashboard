@@ -22,7 +22,7 @@ public class Transaction {
     private Instant transactionDate;
 
     @Column(name = "amount", nullable = false, precision = 15, scale = 2)
-    private BigDecimal amount;
+    private double amount;
 
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
@@ -59,11 +59,11 @@ public class Transaction {
         this.transactionDate = transactionDate;
     }
 
-    public BigDecimal getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(BigDecimal amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
