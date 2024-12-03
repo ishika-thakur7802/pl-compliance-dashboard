@@ -21,18 +21,18 @@ public class Transaction {
     @Column(name = "transaction_date", nullable = false)
     private Instant transactionDate;
 
-    @Column(name = "amount", nullable = false, precision = 15, scale = 2)
+    @Column(name = "amount", nullable = false)
     private double amount;
 
-    @Column(name = "description", length = Integer.MAX_VALUE)
+    @Column(name = "description", length = 1000)
     private String description;
 
     @Enumerated(EnumType.STRING) // Or EnumType.ORDINAL, depending on how the DB stores it
-    @Column(name = "status", columnDefinition = "transaction_status not null")
+    @Column(name = "status", nullable= false)
     private transaction_status status;
 
     @Enumerated(EnumType.STRING) // Or EnumType.ORDINAL, depending on how the DB stores it
-    @Column(name = "type", columnDefinition = "transaction_type not null")
+    @Column(name = "type", nullable=false)
     private transaction_type type;
 
     @ColumnDefault("false")
