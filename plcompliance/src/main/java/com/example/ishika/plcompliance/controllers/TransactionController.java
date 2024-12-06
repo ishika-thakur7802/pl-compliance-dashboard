@@ -1,7 +1,7 @@
 package com.example.ishika.plcompliance.controllers;
 
-import com.example.ishika.plcompliance.entities.Transaction;
-import com.example.ishika.plcompliance.repositories.TransactionRepository;
+import com.example.ishika.plcompliance.entities.jpa.Transaction;
+import com.example.ishika.plcompliance.repositories.jpa.TransactionRepository;
 import com.example.ishika.plcompliance.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

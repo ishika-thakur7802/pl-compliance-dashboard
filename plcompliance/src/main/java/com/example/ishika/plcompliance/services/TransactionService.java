@@ -1,7 +1,7 @@
 package com.example.ishika.plcompliance.services;
 
-import com.example.ishika.plcompliance.entities.Transaction;
-import com.example.ishika.plcompliance.repositories.TransactionRepository;
+import com.example.ishika.plcompliance.entities.jpa.Transaction;
+import com.example.ishika.plcompliance.repositories.jpa.TransactionRepository;
 import org.springframework.stereotype.Service;
 
 @Service
